@@ -30,7 +30,10 @@ From the command line:
 ```bash
 node src/cli.js check 79927398713   # valid
 node src/cli.js digit 7992739871    # 3
+node src/cli.js scan numbers.txt    # one result per line
 ```
+
+`scan` checks one number per line, from files or piped in, and skips blank lines and `#` comments. It prints `valid` or `invalid`, a tab and the number, then a summary. It exits 0 if every number is valid, 1 if any is not, and 2 if there was nothing to check.
 
 ## Tests
 
@@ -38,6 +41,6 @@ node src/cli.js digit 7992739871    # 3
 npm test
 ```
 
-The tests cover published test numbers, invalid and malformed input, 1,000 random round trips through `withCheckDigit`, and every single-digit typo of a valid number. No external packages, just Node's built-in test runner. CI runs them on Node 18, 20 and 22.
+The tests cover the command line and published test numbers, invalid and malformed input, 1,000 random round trips through `withCheckDigit`, and every single-digit typo of a valid number. No external packages, just Node's built-in test runner. CI runs them on Node 18, 20 and 22.
 
 All card numbers in this repo are the networks' published test numbers, not real accounts.
