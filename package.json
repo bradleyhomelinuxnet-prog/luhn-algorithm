@@ -1,0 +1,11 @@
+{
+  "name": "luhn-algorithm",
+  "version": "1.0.0",
+  "description": "The Luhn (mod 10) checksum: validate numbers and compute check digits. No dependencies.",
+  "type": "module",
+  "main": "src/luhn.js",
+  "bin": { "luhn": "src/cli.js" },
+  "scripts": { "test": "node --test" },
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}
