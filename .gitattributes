@@ -1,0 +1,2 @@
+# The demo page is documentation of the library, so GitHub counts the repo as JavaScript.
+*.html linguist-documentation
